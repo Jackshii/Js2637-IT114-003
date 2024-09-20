@@ -22,6 +22,8 @@ public class Problem2 {
         System.out.println("Processing Array:" + Arrays.toString(arr));
         double total = 0;
         String totalOutput = "";
+        //worked on this assignment with my brother Eric Shi es525 from it114-005 section
+        //ucid js2637 9/20/2024
         for(double i: arr){
             total = total +i;
         }
