@@ -135,6 +135,19 @@ public class NumberGuesser4 {
                 lose();
                 pickNewRandom = true;
             }
+            //js2637 9/27/2024
+            //worked with my brother Eric from it114-005
+            else if (guess>number)
+            {
+                System.out.println("guess Lower ");
+                System.out.println (warm(guess, number));
+                
+            }
+            else if (guess<number)
+            {
+                System.out.println("guess Higher ");
+                System.out.println (warm(guess, number));
+            }
         }
         saveState();
     }
@@ -149,6 +162,25 @@ public class NumberGuesser4 {
             System.out.println("Null message received");
         }
         return guess;
+    }
+
+    public String warm(int guess, int number)
+    {
+        //js2637 9/27/2024
+        //worked with my brother Eric from it114-005
+        double dis=Math.abs(guess-number);
+        if(dis<=2)
+        {
+            return "You are hot (2 units away from the number)";
+        }
+        else if(dis<=5)
+        {
+            return "You are warm (5 units away from the number)";
+        }
+        else
+        {
+            return "You are cold (a least 10 units away from the number)";
+        }
     }
 
     public void start() {
