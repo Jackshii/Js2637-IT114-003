@@ -22,6 +22,8 @@ public class Problem3 {
     static <T> void bePositive(T[] arr){
         System.out.println("Processing Array:" + Arrays.toString(arr));
         //your code should set the indexes of this array
+        //js2637 9/20/2024
+        //worked on this assignment with my brother Eric Shi es525 from it114-005 section
         Object[] output = new Object[arr.length];
         double num;
         for(int i=0;i <arr.length;i++)
