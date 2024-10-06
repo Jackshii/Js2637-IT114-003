@@ -5,12 +5,17 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.ConcurrentHashMap;
 
+import java.util.Random;
 public class Server {
     private int port = 3000;
     // connected clients
     // Use ConcurrentHashMap for thread-safe client management
     private final ConcurrentHashMap<Long, ServerThread> connectedClients = new ConcurrentHashMap<>();
     private boolean isRunning = true;
+    private boolean activeGame= false;
+    private int number=0;
+    private Random random = new Random();
+    private int flip=0;
 
     private void start(int port) {
         this.port = port;
@@ -120,10 +125,63 @@ public class Server {
             }
             return true;
         }
-        // add more "else if" as needed
+
+        //js2637 10/6/2024
+        else if("/start".equalsIgnoreCase(message.trim()) && activeGame== false)
+        {
+            activeGame = true;
+            long clientID= sender.getClientId();
+            System.out.println("User[" + clientID + "] has started the number guesser");
+            
+            relay("User[" + clientID + "] has started the number guesser(guess a number between 1-10). use the /guess[int] to guess the number", null);
+            generateNewNumber();
+            System.out.println("the number is "+number);
+        }
+        else if (message.length() >= 6 &&"/guess".equalsIgnoreCase(message.substring(0,6)) && activeGame==true)
+        {
+            if(Integer.parseInt((message.substring(7)).trim())==number)
+            {
+                long clientID= sender.getClientId();
+                relay("User[" + clientID + "] has guess the number correctly. The number was "+number+". type /start to start the game again", null);
+                activeGame= false;
+            }
+            else 
+            {
+                relay("try again", null);
+            }
+        }
+        else if ("/stop".equalsIgnoreCase(message.trim()) && activeGame==true)
+        {
+            activeGame=false;
+            long clientID= sender.getClientId();
+            relay("the game has been stopped by ["+clientID+"]", null);
+        }
+    
+        //js2637 10/6/2024
+        else if ("/flip".equalsIgnoreCase(message.trim()))
+        {
+            long clientID= sender.getClientId();
+            System.out.println("User ["+clientID+"] has fliped a coin a got "+flipCoin());
+            relay("User ["+clientID+"] has fliped a coin a got "+flipCoin(), null);
+        }
         return false;
     }
-
+    private String flipCoin() {
+        flip = random.nextInt(2);
+        if (flip==0) 
+        {
+            return ("Heads");
+        }
+        else if (flip==1)
+        {
+            return ("Tails");
+        }
+        return "error";
+    }
+    private void generateNewNumber() {
+        int range = 10;
+        number = random.nextInt(range) + 1;
+    }
     public static void main(String[] args) {
         System.out.println("Server Starting");
         Server server = new Server();
