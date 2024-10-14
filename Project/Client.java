@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import Module5.Part5.TextFX.Color;
+import Project.TextFX.Color;
 
 /**
  * Demoing bi-directional communication between client and server in a
@@ -63,6 +63,7 @@ public enum Client {
      * @param port
      * @return true if connection was successful
      */
+    //js2637 10/14/2024
     private boolean connect(String address, int port) {
         try {
             server = new Socket(address, port);
@@ -112,6 +113,7 @@ public enum Client {
      * @param text
      * @return true if the text was a command or triggered a command
      */
+    //js2637 10/14/2024
     private boolean processClientCommand(String text) {
         if (isConnection(text)) {
             if (myData.getClientName() == null || myData.getClientName().length() == 0) {
@@ -154,7 +156,7 @@ public enum Client {
                         wasCommand = true;
                         break;
                     case JOIN_ROOM:
-                        sendJoinRoom(commandValue);
+                        send JoinRoom(commandValue);
                         wasCommand = true;
                         break;
                     // Note: these are to disconnect, they're not for changing rooms
@@ -200,6 +202,7 @@ public enum Client {
     /**
      * Tells the server-side we want to disconnect
      */
+    //js2637 10/14/2025
     private void sendDisconnect() {
         Payload p = new Payload();
         p.setPayloadType(PayloadType.DISCONNECT);
@@ -211,6 +214,7 @@ public enum Client {
      * 
      * @param message
      */
+    //js2637 10/14/2024A
     private void sendMessage(String message) {
         Payload p = new Payload();
         p.setPayloadType(PayloadType.MESSAGE);
@@ -246,7 +250,6 @@ public enum Client {
 
     }
     // end send methods
-
     public void start() throws IOException {
         System.out.println("Client starting");
 
@@ -260,6 +263,7 @@ public enum Client {
     /**
      * Listens for messages from the server
      */
+    //js2637 10/14/2024
     private void listenToServer() {
         try {
             while (isRunning && isConnected()) {
@@ -323,6 +327,7 @@ public enum Client {
     /**
      * Closes the server connection and associated resources
      */
+    //js2637
     private void closeServerConnection() {
         myData.reset();
         knownClients.clear();
@@ -402,7 +407,7 @@ public enum Client {
     }
 
     // payload processors
-
+//js2637 10/14/2024
     private void processDisconnect(long clientId, String clientName) {
         System.out.println(
                 TextFX.colorize(String.format("*%s disconnected*",
