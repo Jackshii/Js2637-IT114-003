@@ -1,0 +1,59 @@
+11/10/2024 13:26:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/10/2024 13:26:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/10/2024 13:27:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/10/2024 13:27:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [2] Message: [null] Client Name [bobby] Status [connect]
+11/10/2024 13:27:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [bobby] Status [connect]
+11/10/2024 13:27:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/10/2024 13:27:11 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [bobby rolled 2d6 and got 5 (Rolls: 3 2)]
+11/10/2024 13:27:17 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [bobby rolled 3d6 and got 13 (Rolls: 6 1 6)]
+11/10/2024 13:27:20 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [bobby flipped a coin and got Tails]
+11/10/2024 13:27:23 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [bobby flipped a coin and got Heads]
+11/10/2024 13:27:27 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [bobby rolled 1d1999 and got 1401 (Rolls: 1401)]
+11/10/2024 13:27:41 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [This is <b>bold</b> and <i>italic</i> along with <u>underlined</u> with colored text such as <red> red </red>, <blue> blue </blue>, and <green> green </green> and must support a combination of all formats + color like <b><u><i><red> this is bold, underline, italic, and red </red></i></u></b>.]
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [jack] Status [disconnect]
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [2] Message: [null] Client Name [bobby] Status [disconnect]
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/10/2024 13:29:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+11/10/2024 13:29:55 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1677)
+	at Project.Client.Client.listenToInput(Client.java:360)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
