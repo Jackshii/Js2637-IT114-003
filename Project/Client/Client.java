@@ -182,6 +182,8 @@ public enum Client {
                         wasCommand = true;
                         break;
                     // Note: these are to disconnect, they're not for changing rooms
+                    //js2637 11/10/2024
+                    //worked on it with my brother es525 from it114 
                     case ROLL:
                     if (commandValue.contains("d")) {
                 

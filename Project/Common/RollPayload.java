@@ -1,3 +1,5 @@
+//js2637 11/10/2024
+//worked on it with my brother es525 from it114
 package Project.Common;
 
 public class RollPayload extends Payload{
@@ -16,7 +18,7 @@ public class RollPayload extends Payload{
     public int getSide() {
         return diceside;
     }
-    public void setY(int diceside) {
+    public void setSide(int diceside) {
         this.diceside = diceside;
     }
     @Override

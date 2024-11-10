@@ -99,6 +99,8 @@ public class ServerThread extends BaseServerThread {
                     ConnectionPayload cp = (ConnectionPayload) payload;
                     setClientName(cp.getClientName());
                     break;
+                    //js2637 11/10/2024
+                    //worked on it with my brother es525 from it114 
                 case FLIP:
                 currentRoom.handleFlip(this);
                 break;
