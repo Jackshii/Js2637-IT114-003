@@ -202,7 +202,7 @@ public enum Client {
                         int diceside = Integer.parseInt(commandValue);
                         sendRoll(1, diceside);
                     }
-                    wasCommand = true;
+                        wasCommand = true;
                         break;
                     case FLIP:
                         sendFlip();
