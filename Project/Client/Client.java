@@ -185,19 +185,23 @@ public enum Client {
                     //js2637 11/10/2024
                     //worked on it with my brother es525 from it114 
                     case ROLL:
-                    if (commandValue.contains("d")) {
+                    if(commandValue.trim().isEmpty())
+                    {
+                        System.out.println(TextFX.colorize("Invalid roll command format. Use /roll # or /roll #d#.", Color.RED));
+                    }
+                    else if (commandValue.contains("d")) {
                 
                         String[] parts = commandValue.split("d");
                         int numdice =  Integer.parseInt(parts[0]);
                         int diceside = Integer.parseInt(parts[1]);    
                         sendRoll(numdice,diceside);
                     } 
-                    else if (Integer.parseInt(commandValue)>0)
+                    else
                     {
                         int diceside = Integer.parseInt(commandValue);
                         sendRoll(1, diceside);
                     }
-                    wasCommand = true;
+                        wasCommand = true;
                         break;
                     case FLIP:
                         sendFlip();

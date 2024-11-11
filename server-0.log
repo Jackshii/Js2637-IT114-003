@@ -926,3 +926,41 @@ java.net.SocketException: Connection reset
 [34m>[0m Room[lobby]: Disconnect All triggered
 =======
 >>>>>>> ad90da3621efb4fcf09201613b99defc898de001
+11/11/2024 16:20:20 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+11/11/2024 16:20:20 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+11/11/2024 16:20:20 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+11/11/2024 16:20:20 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+11/11/2024 16:20:20 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+11/11/2024 16:20:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 16:20:35 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+11/11/2024 16:20:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+11/11/2024 16:20:35 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+11/11/2024 16:20:35 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jack] Status [disconnect]
+11/11/2024 16:20:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *jack[1] initialized*
+11/11/2024 16:20:35 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+11/11/2024 16:20:35 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jack[1] joined the Room[lobby]
+11/11/2024 16:20:39 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hello]
+11/11/2024 16:20:39 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: hello
+11/11/2024 16:20:50 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (1,23)
+11/11/2024 16:20:50 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 23 sided dice and got 15
+11/11/2024 16:20:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (23,3)
+11/11/2024 16:20:54 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 23d3 and got 46 (Rolls: 3 2 1 1 2 3 2 3 1 2 2 1 1 3 3 3 1 3 1 1 2 3 2)
