@@ -235,68 +235,34 @@ public class Room implements AutoCloseable{
     protected void clientDisconnect(ServerThread sender) {
         disconnect(sender);
     }
+    
     protected void handleRoll(ServerThread sender, int numdice, int diceside) {
         String clientName = sender.getClientName();
         
         Random random = new Random();
         int total = 0;
-        String rollResults = "";  // Initialize as an empty string
+        String rollResults = "";  
         
         for (int i = 0; i < numdice; i++) {
             int roll = random.nextInt(diceside) + 1;  
             total += roll;  
-            rollResults += roll + " ";  // Concatenate the roll result
+            rollResults += roll + " ";  
         }
         
-        // Trim any trailing space
+        
         rollResults = rollResults.trim();
+        String resultMessage="";
+       if (numdice==1)
+       {
+        resultMessage = clientName + " rolled " + diceside + " sided dice and got " + total;
+       }
+       else
+       {
+        resultMessage = clientName + " rolled " + numdice + "d" + diceside + " and got " + total + " (Rolls: " + rollResults + ")";
+       }
         
-        // Create the result message
-        String resultMessage = clientName + " rolled " + numdice + "d" + diceside + " and got " + total + " (Rolls: " + rollResults + ")";
-        
-        LoggerUtil.INSTANCE.info("Roll command processed: " + resultMessage);
-        sendMessage(null, resultMessage);  // Send the result message to all clients in the room
+        sendMessage(null, resultMessage);  
     }
-
-    public static String handleRoll(String command, String clientName) {
-        LoggerUtil.INSTANCE.info("Received roll command: " + command); 
-        Random random = new Random();
-        
-        String[] parts = command.split(" ");
-        if (parts.length != 2) {
-            ;
-        }
-        
-            String rollPart = parts[1];
-            String message;
-        
-            try {
-                if (rollPart.contains("d")) {
-                    String[] diceParts = rollPart.split("d");
-                    int numDice = Integer.parseInt(diceParts[0]);
-                    int diceSides = Integer.parseInt(diceParts[1]);
-                    int total = 0;
-                    StringBuilder rollResults = new StringBuilder();
-        
-                    for (int i = 0; i < numDice; i++) {
-                        int roll = random.nextInt(diceSides) + 1;
-                        total += roll;
-                        rollResults.append(roll).append(" ");
-                    }
-                    message = String.format("%s rolled %s and got %d (Rolls: %s)", 
-                        clientName, rollPart, total, rollResults.toString().trim());
-                } else {
-                    int max = Integer.parseInt(rollPart);
-                    int roll = random.nextInt(max) + 1;
-                    message = String.format("%s rolled %s and got %d", 
-                        clientName, rollPart, roll);
-                }
-            } catch (NumberFormatException e) {
-                return "Invalid number format in roll command.";
-            }
-        
-            return message;
-        }
 
     protected void handleFlip(ServerThread sender) {
         String clientName = sender.getClientName();

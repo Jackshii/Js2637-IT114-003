@@ -91,6 +91,7 @@ public class ServerThread extends BaseServerThread {
     }
 
     // handle received message from the Client
+    
     @Override
     protected void processPayload(Payload payload) {
         try {
@@ -99,13 +100,13 @@ public class ServerThread extends BaseServerThread {
                     ConnectionPayload cp = (ConnectionPayload) payload;
                     setClientName(cp.getClientName());
                     break;
+                    
                 case FLIP:
-                currentRoom.handleFlip(this);
-                break;
-                
+                    currentRoom.handleFlip(this);
+                    break;
                 case ROLL:
-                RollPayload rp = (RollPayload) payload; 
-                currentRoom.handleRoll(this, rp.getdice(), rp.getSide());  
+                    RollPayload rp = (RollPayload) payload; 
+                    currentRoom.handleRoll(this, rp.getdice(), rp.getSide());  
                 break;
                 case MESSAGE:
                     currentRoom.sendMessage(this, payload.getMessage());
