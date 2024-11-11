@@ -170,3 +170,139 @@ java.util.NoSuchElementException: No line found
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
 
+11/11/2024 12:42:40 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 12:42:40 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 12:42:55 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m IOException
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:589)
+	at java.base/sun.nio.ch.Net.connect(Net.java:578)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at java.base/java.net.Socket.connect(Socket.java:687)
+	at java.base/java.net.Socket.<init>(Socket.java:556)
+	at java.base/java.net.Socket.<init>(Socket.java:325)
+	at Project.Client.Client.connect(Client.java:88)
+	... 9 more elements truncated ...
+
+11/11/2024 12:42:55 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.lang.NullPointerException: Cannot invoke "java.io.ObjectOutputStream.writeObject(Object)" because "this.out" is null
+	at Project.Client.Client.send(Client.java:311)
+	at Project.Client.Client.sendClientName(Client.java:301)
+	at Project.Client.Client.processClientCommand(Client.java:146)
+	at Project.Client.Client.listenToInput(Client.java:365)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	... 1 more elements truncated ...
+
+11/11/2024 12:42:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/11/2024 12:42:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 12:42:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 12:43:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 12:43:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/11/2024 12:43:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/11/2024 12:43:23 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 3d3 and got 5 (Rolls: 1 1 3)]
+11/11/2024 12:43:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 3d5 and got 11 (Rolls: 4 4 3)]
+11/11/2024 12:43:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 5d2 and got 8 (Rolls: 1 2 1 2 2)]
+11/11/2024 12:43:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 1d200 and got 13 (Rolls: 13)]
+11/11/2024 12:43:59 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 1d23 and got 16 (Rolls: 16)]
+11/11/2024 12:44:03 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 1d68 and got 40 (Rolls: 40)]
+11/11/2024 12:44:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [Jack] Status [disconnect]
+11/11/2024 12:44:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/11/2024 12:44:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/11/2024 12:44:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/11/2024 12:44:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/11/2024 12:44:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/11/2024 12:44:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/11/2024 12:44:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/11/2024 12:44:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/11/2024 12:44:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+11/11/2024 12:44:40 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1677)
+	at Project.Client.Client.listenToInput(Client.java:364)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/11/2024 12:44:40 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/11/2024 12:44:51 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 12:44:51 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 12:45:00 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 12:45:00 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/11/2024 12:45:00 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/11/2024 12:45:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+11/11/2024 12:45:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 3d3 and got 5 (Rolls: 2 1 2)]
+11/11/2024 12:45:13 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 5d3 and got 11 (Rolls: 2 3 3 2 1)]
+11/11/2024 12:45:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 1d12 and got 11 (Rolls: 11)]
+11/11/2024 12:45:17 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 1d32 and got 1 (Rolls: 1)]
+11/11/2024 12:45:20 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack rolled 1d56 and got 38 (Rolls: 38)]
+11/11/2024 12:45:22 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack flipped a coin and got Tails]
+11/11/2024 12:45:23 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack flipped a coin and got Heads]
+11/11/2024 12:45:25 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [Jack flipped a coin and got Tails]
+11/11/2024 12:45:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [<b>green</b>]
+11/11/2024 12:45:35 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1677)
+	at Project.Client.Client.listenToInput(Client.java:364)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+

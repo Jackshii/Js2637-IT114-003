@@ -263,13 +263,9 @@ public class Room implements AutoCloseable{
         Random random = new Random();
         
         String[] parts = command.split(" ");
-        if (parts.length != 2) {
-            ;
-        }
         
             String rollPart = parts[1];
             String message;
-        
             try {
                 if (rollPart.contains("d")) {
                     String[] diceParts = rollPart.split("d");
@@ -283,13 +279,12 @@ public class Room implements AutoCloseable{
                         total += roll;
                         rollResults.append(roll).append(" ");
                     }
-                    message = String.format("%s rolled %s and got %d (Rolls: %s)", 
+                        message = String.format("%s rolled %s and got %d (Rolls: %s)", 
                         clientName, rollPart, total, rollResults.toString().trim());
                 } else {
                     int max = Integer.parseInt(rollPart);
                     int roll = random.nextInt(max) + 1;
-                    message = String.format("%s rolled %s and got %d", 
-                        clientName, rollPart, roll);
+                    message = String.format("%s rolled %s and got %d",clientName, rollPart, roll);
                 }
             } catch (NumberFormatException e) {
                 return "Invalid number format in roll command.";

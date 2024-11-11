@@ -1,0 +1,23 @@
+11/11/2024 12:42:02 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+11/11/2024 12:42:02 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+11/11/2024 12:42:02 [Project.Server.Server] ([31mSEVERE[0m):
+[34m>[0m Error accepting connection
+java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:565)
+	at java.base/sun.nio.ch.Net.bind(Net.java:554)
+	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:390)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:277)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:170)
+	at Project.Server.Server.start(Server.java:42)
+	at Project.Server.Server.main(Server.java:159)
+
+11/11/2024 12:42:02 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Closing server socket
+11/11/2024 12:42:02 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Stopped
+11/11/2024 12:42:02 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m JVM is shutting down. Perform cleanup tasks.

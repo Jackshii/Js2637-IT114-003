@@ -100,13 +100,12 @@ public class ServerThread extends BaseServerThread {
                     setClientName(cp.getClientName());
                     break;
                 case FLIP:
-                currentRoom.handleFlip(this);
-                break;
-                
+                    currentRoom.handleFlip(this);
+                    break;
                 case ROLL:
-                RollPayload rp = (RollPayload) payload; 
-                currentRoom.handleRoll(this, rp.getdice(), rp.getSide());  
-                break;
+                    RollPayload rp = (RollPayload) payload; 
+                    currentRoom.handleRoll(this, rp.getdice(), rp.getSide());  
+                    break;
                 case MESSAGE:
                     currentRoom.sendMessage(this, payload.getMessage());
                     break;

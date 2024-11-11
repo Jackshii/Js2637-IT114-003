@@ -184,17 +184,19 @@ public enum Client {
                     // Note: these are to disconnect, they're not for changing rooms
                     case ROLL:
                     if (commandValue.contains("d")) {
-                
-                        String[] parts = commandValue.split("d");
-                        if (parts[0].isEmpty() || parts[1].isEmpty()) {
-                    System.out.println(TextFX.colorize("Invalid roll command format. Use /roll #d#.", TextFX.Color.RED));
-                }
+                    String[] parts = commandValue.split("d");
+                    if (parts[0].isEmpty() || parts[1].isEmpty()) 
+                    {
+                        System.out.println(TextFX.colorize("Invalid roll command format. Use /roll #d#.", TextFX.Color.RED));
+                    }
                         int numdice =  Integer.parseInt(parts[0]);
                         int diceside = Integer.parseInt(parts[1]);    
                        sendRoll(numdice,diceside);
-                    } else {
+                    } 
+                    else 
+                    {
                         int diceside = Integer.parseInt(commandValue);
-                    sendRoll(1, diceside);
+                        sendRoll(1, diceside);
                     }
                     wasCommand = true;
                         break;
@@ -214,13 +216,15 @@ public enum Client {
         }
         return false;
     }
-    private void sendRoll(int numdie,int diceside) {
+    private void sendRoll(int numdie,int diceside) 
+    {
         RollPayload p= new RollPayload(numdie, diceside);
         p.setPayloadType(PayloadType.ROLL);
         send(p);
     }
 
-    private void sendFlip() {
+    private void sendFlip() 
+    {
         Payload p = new Payload();
         p.setPayloadType(PayloadType.FLIP);
         send(p);
