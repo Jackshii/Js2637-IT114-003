@@ -241,28 +241,28 @@ public class Room implements AutoCloseable{
         
         Random random = new Random();
         int total = 0;
-        String rollResults = "";  
+        String rollResults = "";
         
         for (int i = 0; i < numdice; i++) {
             int roll = random.nextInt(diceside) + 1;  
             total += roll;  
-            rollResults += roll + " ";  
+            rollResults += roll + " "; 
         }
-        
-        
         rollResults = rollResults.trim();
-        String resultMessage="";
-       if (numdice==1)
-       {
-        resultMessage = clientName + " rolled " + diceside + " sided dice and got " + total;
-       }
-       else
-       {
-        resultMessage = clientName + " rolled " + numdice + "d" + diceside + " and got " + total + " (Rolls: " + rollResults + ")";
-       }
+        String resultMessage ="";
+        if (numdice==1)
+        {
+            resultMessage = clientName + " rolled " + diceside + " sided dice and got " + total ;
+           
+        }
+        else
+        {
+            resultMessage = clientName + " rolled " + numdice + "d" + diceside + " and got " + total + " (Rolls: " + rollResults + ")";
+        }
         
         sendMessage(null, resultMessage);  
     }
+
 
     protected void handleFlip(ServerThread sender) {
         String clientName = sender.getClientName();
@@ -275,12 +275,12 @@ public class Room implements AutoCloseable{
         } else {
             resultMessage = String.format("%s flipped a coin and got Heads", clientName);
         }
-    
-        LoggerUtil.INSTANCE.info("Flip command processed: " + resultMessage);
         sendMessage(null, resultMessage);  // Send the result message to all clients in the room
     }
     
 
+    //js2637 11/10/2024
+    //worked on it with my brother es525 from it114 
     public class TextFormatter {
     
         public static String formatText(String message) {
