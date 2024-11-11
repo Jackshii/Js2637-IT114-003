@@ -3,6 +3,7 @@
 package Project.Common;
 
 public class RollPayload extends Payload{
+
     private int numdice;
     private int diceside;
     public RollPayload(int numdice, int diceside){

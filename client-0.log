@@ -677,6 +677,7 @@ java.util.NoSuchElementException: No line found
 [34m>[0m Closed socket
 11/11/2024 16:21:07 [Project.Client.Client] ([32mINFO[0m):
 [34m>[0m listenToServer thread stopped
+<<<<<<< HEAD
 11/11/2024 16:29:07 [Project.Client.Client] ([32mINFO[0m):
 [34m>[0m Client Created
 11/11/2024 16:29:07 [Project.Client.Client] ([32mINFO[0m):
@@ -738,3 +739,5 @@ java.util.NoSuchElementException: No line found
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
 
+=======
+>>>>>>> main

@@ -235,16 +235,22 @@ public class Room implements AutoCloseable{
     protected void clientDisconnect(ServerThread sender) {
         disconnect(sender);
     }
+    
     protected void handleRoll(ServerThread sender, int numdice, int diceside) {
         String clientName = sender.getClientName();
         
         Random random = new Random();
         int total = 0;
+<<<<<<< HEAD
         String rollResults = "";
+=======
+        String rollResults = "";  
+>>>>>>> main
         
         for (int i = 0; i < numdice; i++) {
             int roll = random.nextInt(diceside) + 1;  
             total += roll;  
+<<<<<<< HEAD
             rollResults += roll + " "; 
         }
         rollResults = rollResults.trim();
@@ -263,6 +269,26 @@ public class Room implements AutoCloseable{
     }
 
 
+=======
+            rollResults += roll + " ";  
+        }
+        
+        
+        rollResults = rollResults.trim();
+        String resultMessage="";
+       if (numdice==1)
+       {
+        resultMessage = clientName + " rolled " + diceside + " sided dice and got " + total;
+       }
+       else
+       {
+        resultMessage = clientName + " rolled " + numdice + "d" + diceside + " and got " + total + " (Rolls: " + rollResults + ")";
+       }
+        
+        sendMessage(null, resultMessage);  
+    }
+
+>>>>>>> main
     protected void handleFlip(ServerThread sender) {
         String clientName = sender.getClientName();
         Random random = new Random();
