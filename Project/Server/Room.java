@@ -250,7 +250,17 @@ public class Room implements AutoCloseable{
             rollResults += roll + " "; 
         }
         rollResults = rollResults.trim();
-        String resultMessage = clientName + " rolled " + numdice + "d" + diceside + " and got " + total + " (Rolls: " + rollResults + ")";
+        String resultMessage ="";
+        if (numdice==1)
+        {
+            resultMessage = clientName + " rolled " + diceside + " sided dice and got " + total ;
+           
+        }
+        else
+        {
+            resultMessage = clientName + " rolled " + numdice + "d" + diceside + " and got " + total + " (Rolls: " + rollResults + ")";
+        }
+        
         sendMessage(null, resultMessage);  
     }
 

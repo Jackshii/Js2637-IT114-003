@@ -367,3 +367,274 @@ java.util.NoSuchElementException: No line found
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
 
+11/11/2024 15:42:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 15:42:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 15:42:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 15:42:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/11/2024 15:42:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/11/2024 15:42:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [\/roll]
+11/11/2024 15:42:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [/ro;;]
+11/11/2024 15:43:01 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at Project.Client.Client.processClientCommand(Client.java:198)
+	at Project.Client.Client.listenToInput(Client.java:363)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	... 2 more elements truncated ...
+
+11/11/2024 15:43:01 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/11/2024 15:44:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 15:44:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 15:44:52 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 15:44:52 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/11/2024 15:44:52 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/11/2024 15:44:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+11/11/2024 15:44:56 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at Project.Client.Client.processClientCommand(Client.java:198)
+	at Project.Client.Client.listenToInput(Client.java:363)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	... 2 more elements truncated ...
+
+11/11/2024 15:44:56 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/11/2024 15:53:38 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 15:53:38 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 15:53:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 15:53:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/11/2024 15:53:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/11/2024 15:53:49 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at Project.Client.Client.processClientCommand(Client.java:195)
+	at Project.Client.Client.listenToInput(Client.java:366)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	... 2 more elements truncated ...
+
+11/11/2024 15:53:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/11/2024 15:54:20 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 15:54:20 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 15:54:26 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.lang.NullPointerException: Cannot invoke "java.io.ObjectOutputStream.writeObject(Object)" because "this.out" is null
+	at Project.Client.Client.send(Client.java:312)
+	at Project.Client.Client.sendRoll(Client.java:225)
+	at Project.Client.Client.processClientCommand(Client.java:198)
+	at Project.Client.Client.listenToInput(Client.java:366)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	... 1 more elements truncated ...
+
+11/11/2024 15:54:26 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/11/2024 15:55:12 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 15:55:12 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 15:55:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 15:55:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/11/2024 15:55:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/11/2024 15:55:23 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 2d2 and got 4 (Rolls: 2 2)]
+11/11/2024 15:55:26 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 1d23 and got 4 (Rolls: 4)]
+11/11/2024 15:55:48 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at Project.Client.Client.processClientCommand(Client.java:195)
+	at Project.Client.Client.listenToInput(Client.java:366)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	... 2 more elements truncated ...
+
+11/11/2024 15:55:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/11/2024 15:59:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 15:59:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 15:59:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 15:59:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/11/2024 15:59:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/11/2024 15:59:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 1d20 and got 9 (Rolls: 9)]
+11/11/2024 15:59:29 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1677)
+	at Project.Client.Client.listenToInput(Client.java:365)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/11/2024 15:59:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 15:59:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 15:59:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 15:59:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/11/2024 15:59:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/11/2024 16:00:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 23sided dice and got 6]
+11/11/2024 16:00:13 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 2d2 and got 3 (Rolls: 1 2)]
+11/11/2024 16:00:17 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1677)
+	at Project.Client.Client.listenToInput(Client.java:365)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/11/2024 16:03:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 16:03:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 16:03:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 16:03:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/11/2024 16:03:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/11/2024 16:03:32 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at Project.Client.Client.processClientCommand(Client.java:195)
+	at Project.Client.Client.listenToInput(Client.java:366)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	... 2 more elements truncated ...
+
+11/11/2024 16:03:32 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/11/2024 16:04:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/11/2024 16:04:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/11/2024 16:04:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 16:04:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [2] Message: [null] Client Name [jack] Status [connect]
+11/11/2024 16:04:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [jack] Status [connect]
+11/11/2024 16:04:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/11/2024 16:04:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [/Create_room]
+11/11/2024 16:04:27 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [/createRoom]
+11/11/2024 16:04:40 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [/createRoom]
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [jack] Status [disconnect]
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [2] Message: [null] Client Name [jack] Status [disconnect]
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/11/2024 16:05:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+11/11/2024 16:05:06 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1677)
+	at Project.Client.Client.listenToInput(Client.java:365)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+

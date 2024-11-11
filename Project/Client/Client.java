@@ -188,15 +188,14 @@ public enum Client {
                     if (commandValue.contains("d")) {
                 
                         String[] parts = commandValue.split("d");
-                        if (parts[0].isEmpty() || parts[1].isEmpty()) {
-                    System.out.println(TextFX.colorize("Invalid roll command format. Use /roll #d#.", TextFX.Color.RED));
-                }
                         int numdice =  Integer.parseInt(parts[0]);
                         int diceside = Integer.parseInt(parts[1]);    
-                       sendRoll(numdice,diceside);
-                    } else {
+                        sendRoll(numdice,diceside);
+                    } 
+                    else if (Integer.parseInt(commandValue)>0)
+                    {
                         int diceside = Integer.parseInt(commandValue);
-                    sendRoll(1, diceside);
+                        sendRoll(1, diceside);
                     }
                     wasCommand = true;
                         break;
