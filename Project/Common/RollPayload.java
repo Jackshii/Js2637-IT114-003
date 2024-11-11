@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 //js2637 11/10/2024
 //worked on it with my brother es525 from it114
-=======
->>>>>>> ad90da3621efb4fcf09201613b99defc898de001
 package Project.Common;
 
 public class RollPayload extends Payload{
@@ -21,11 +18,7 @@ public class RollPayload extends Payload{
     public int getSide() {
         return diceside;
     }
-<<<<<<< HEAD
     public void setSide(int diceside) {
-=======
-    public void setY(int diceside) {
->>>>>>> ad90da3621efb4fcf09201613b99defc898de001
         this.diceside = diceside;
     }
     @Override
