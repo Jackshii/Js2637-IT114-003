@@ -182,12 +182,16 @@ public enum Client {
                         wasCommand = true;
                         break;
                     // Note: these are to disconnect, they're not for changing rooms
+<<<<<<< HEAD
                     //js2637 11/10/2024
                     //worked on it with my brother es525 from it114 
+=======
+>>>>>>> ad90da3621efb4fcf09201613b99defc898de001
                     case ROLL:
                     if (commandValue.contains("d")) {
                 
                         String[] parts = commandValue.split("d");
+<<<<<<< HEAD
                         int numdice =  Integer.parseInt(parts[0]);
                         int diceside = Integer.parseInt(parts[1]);    
                         sendRoll(numdice,diceside);
@@ -196,6 +200,17 @@ public enum Client {
                     {
                         int diceside = Integer.parseInt(commandValue);
                         sendRoll(1, diceside);
+=======
+                        if (parts[0].isEmpty() || parts[1].isEmpty()) {
+                    System.out.println(TextFX.colorize("Invalid roll command format. Use /roll #d#.", TextFX.Color.RED));
+                }
+                        int numdice =  Integer.parseInt(parts[0]);
+                        int diceside = Integer.parseInt(parts[1]);    
+                       sendRoll(numdice,diceside);
+                    } else {
+                        int diceside = Integer.parseInt(commandValue);
+                    sendRoll(1, diceside);
+>>>>>>> ad90da3621efb4fcf09201613b99defc898de001
                     }
                     wasCommand = true;
                         break;

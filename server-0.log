@@ -270,6 +270,7 @@ java.net.SocketException: Connection reset
 [34m>[0m ServerThread[bobby(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [This is **bold** and *italic* along with _underlined_ with colored text such as #r red r#, #b blue b#, and #g green g# and must support a combination of all formats + color like **_*#r this is bold, underline, italic, and red r#*_**.]
 11/10/2024 13:27:41 [Project.Server.Room] ([32mINFO[0m):
 [34m>[0m Room[lobby]: sending message to 2 recipients: This is <b>bold</b> and <i>italic</i> along with <u>underlined</u> with colored text such as <red> red </red>, <blue> blue </blue>, and <green> green </green> and must support a combination of all formats + color like <b><u><i><red> this is bold, underline, italic, and red </red></i></u></b>.
+<<<<<<< HEAD
 11/10/2024 13:48:43 [Project.Server.Server] ([32mINFO[0m):
 [34m>[0m Server Starting
 11/10/2024 13:48:43 [Project.Server.Server] ([32mINFO[0m):
@@ -923,3 +924,5 @@ java.net.SocketException: Connection reset
 [34m>[0m JVM is shutting down. Perform cleanup tasks.
 11/11/2024 16:05:05 [Project.Server.Room] ([32mINFO[0m):
 [34m>[0m Room[lobby]: Disconnect All triggered
+=======
+>>>>>>> ad90da3621efb4fcf09201613b99defc898de001

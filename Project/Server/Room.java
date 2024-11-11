@@ -235,18 +235,26 @@ public class Room implements AutoCloseable{
     protected void clientDisconnect(ServerThread sender) {
         disconnect(sender);
     }
+<<<<<<< HEAD
     //js2637 11/10/2024
      //worked on it with my brother es525 from it114 
+=======
+>>>>>>> ad90da3621efb4fcf09201613b99defc898de001
     protected void handleRoll(ServerThread sender, int numdice, int diceside) {
         String clientName = sender.getClientName();
         
         Random random = new Random();
         int total = 0;
+<<<<<<< HEAD
         String rollResults = "";
+=======
+        String rollResults = "";  // Initialize as an empty string
+>>>>>>> ad90da3621efb4fcf09201613b99defc898de001
         
         for (int i = 0; i < numdice; i++) {
             int roll = random.nextInt(diceside) + 1;  
             total += roll;  
+<<<<<<< HEAD
             rollResults += roll + " "; 
         }
         rollResults = rollResults.trim();
@@ -264,6 +272,60 @@ public class Room implements AutoCloseable{
         sendMessage(null, resultMessage);  
     }
 
+=======
+            rollResults += roll + " ";  // Concatenate the roll result
+        }
+        
+        // Trim any trailing space
+        rollResults = rollResults.trim();
+        
+        // Create the result message
+        String resultMessage = clientName + " rolled " + numdice + "d" + diceside + " and got " + total + " (Rolls: " + rollResults + ")";
+        
+        LoggerUtil.INSTANCE.info("Roll command processed: " + resultMessage);
+        sendMessage(null, resultMessage);  // Send the result message to all clients in the room
+    }
+
+    public static String handleRoll(String command, String clientName) {
+        LoggerUtil.INSTANCE.info("Received roll command: " + command); 
+        Random random = new Random();
+        
+        String[] parts = command.split(" ");
+        if (parts.length != 2) {
+            ;
+        }
+        
+            String rollPart = parts[1];
+            String message;
+        
+            try {
+                if (rollPart.contains("d")) {
+                    String[] diceParts = rollPart.split("d");
+                    int numDice = Integer.parseInt(diceParts[0]);
+                    int diceSides = Integer.parseInt(diceParts[1]);
+                    int total = 0;
+                    StringBuilder rollResults = new StringBuilder();
+        
+                    for (int i = 0; i < numDice; i++) {
+                        int roll = random.nextInt(diceSides) + 1;
+                        total += roll;
+                        rollResults.append(roll).append(" ");
+                    }
+                    message = String.format("%s rolled %s and got %d (Rolls: %s)", 
+                        clientName, rollPart, total, rollResults.toString().trim());
+                } else {
+                    int max = Integer.parseInt(rollPart);
+                    int roll = random.nextInt(max) + 1;
+                    message = String.format("%s rolled %s and got %d", 
+                        clientName, rollPart, roll);
+                }
+            } catch (NumberFormatException e) {
+                return "Invalid number format in roll command.";
+            }
+        
+            return message;
+        }
+>>>>>>> ad90da3621efb4fcf09201613b99defc898de001
 
     protected void handleFlip(ServerThread sender) {
         String clientName = sender.getClientName();
@@ -276,12 +338,20 @@ public class Room implements AutoCloseable{
         } else {
             resultMessage = String.format("%s flipped a coin and got Heads", clientName);
         }
+<<<<<<< HEAD
+=======
+    
+        LoggerUtil.INSTANCE.info("Flip command processed: " + resultMessage);
+>>>>>>> ad90da3621efb4fcf09201613b99defc898de001
         sendMessage(null, resultMessage);  // Send the result message to all clients in the room
     }
     
 
+<<<<<<< HEAD
     //js2637 11/10/2024
     //worked on it with my brother es525 from it114 
+=======
+>>>>>>> ad90da3621efb4fcf09201613b99defc898de001
     public class TextFormatter {
     
         public static String formatText(String message) {

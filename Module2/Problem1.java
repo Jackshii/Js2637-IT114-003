@@ -29,9 +29,9 @@ public class Problem1 {
         }
         //hint: use the arr variable; don't diretly use the a1-a4 variables
         //TODO add/edit code here
-        //end add/edit section
-        System.out.println();
-        System.out.println("End process");
+        //end add/edit section                                                                                                                                                    
+        System.out.println();  
+        System.out.println("End process");  ppp
     }
 
 }    

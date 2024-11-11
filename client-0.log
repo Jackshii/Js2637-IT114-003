@@ -170,6 +170,7 @@ java.util.NoSuchElementException: No line found
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
 
+<<<<<<< HEAD
 11/10/2024 13:49:07 [Project.Client.Client] ([32mINFO[0m):
 [34m>[0m Client Created
 11/10/2024 13:49:07 [Project.Client.Client] ([32mINFO[0m):
@@ -638,3 +639,5 @@ java.util.NoSuchElementException: No line found
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
 
+=======
+>>>>>>> ad90da3621efb4fcf09201613b99defc898de001
