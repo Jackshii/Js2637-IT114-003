@@ -964,3 +964,65 @@ java.net.SocketException: Connection reset
 [34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (23,3)
 11/11/2024 16:20:54 [Project.Server.Room] ([32mINFO[0m):
 [34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 23d3 and got 46 (Rolls: 3 2 1 1 2 3 2 3 1 2 2 1 1 3 3 3 1 3 1 1 2 3 2)
+11/11/2024 16:28:43 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+11/11/2024 16:28:43 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+11/11/2024 16:28:44 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+11/11/2024 16:28:44 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+11/11/2024 16:28:44 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+11/11/2024 16:29:19 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+11/11/2024 16:29:19 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+11/11/2024 16:29:19 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+11/11/2024 16:29:19 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+11/11/2024 16:29:19 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jack] Status [disconnect]
+11/11/2024 16:29:19 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *jack[1] initialized*
+11/11/2024 16:29:19 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+11/11/2024 16:29:19 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jack[1] joined the Room[lobby]
+11/11/2024 16:29:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (1,30)
+11/11/2024 16:29:26 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 30 sided dice and got 30
+11/11/2024 16:29:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (3,30)
+11/11/2024 16:29:29 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 3d30 and got 55 (Rolls: 28 25 2)
+11/11/2024 16:29:31 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (1,20)
+11/11/2024 16:29:31 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 20 sided dice and got 6
+11/11/2024 16:29:33 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (1,20)
+11/11/2024 16:29:33 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 20 sided dice and got 2
+11/11/2024 16:29:39 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (1,40)
+11/11/2024 16:29:39 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 40 sided dice and got 15
+11/11/2024 16:29:43 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (2,20)
+11/11/2024 16:29:43 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 2d20 and got 13 (Rolls: 7 6)
+11/11/2024 16:29:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (1,20)
+11/11/2024 16:29:46 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 20 sided dice and got 14
+11/11/2024 16:29:48 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (1,6)
+11/11/2024 16:29:48 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 6 sided dice and got 1
+11/11/2024 16:29:51 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (2,6)
+11/11/2024 16:29:51 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 2d6 and got 9 (Rolls: 5 4)
