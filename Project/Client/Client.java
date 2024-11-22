@@ -183,21 +183,20 @@ public enum Client {
                         break;
                     // Note: these are to disconnect, they're not for changing rooms
                     //js2637 11/10/2024
-                    //worked on it with my brother es525 from it114
+                    //worked on it with my brother es525 from it114 
                     case ROLL:
-                    if (commandValue.contains("d")) 
+                    if(commandValue.trim().isEmpty())
                     {
+                        System.out.println(TextFX.colorize("Invalid roll command format. Use /roll # or /roll #d#.", Color.RED));
+                    }
+                    else if (commandValue.contains("d")) {
                 
                         String[] parts = commandValue.split("d");
-                        if (parts[0].isEmpty() || parts[1].isEmpty()) 
-                        {
-                        System.out.println(TextFX.colorize("Invalid roll command format. Use /roll #d#.", TextFX.Color.RED));
-                        }
                         int numdice =  Integer.parseInt(parts[0]);
                         int diceside = Integer.parseInt(parts[1]);    
                         sendRoll(numdice,diceside);
                     } 
-                    else 
+                    else
                     {
                         int diceside = Integer.parseInt(commandValue);
                         sendRoll(1, diceside);
