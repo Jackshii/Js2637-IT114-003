@@ -4,10 +4,12 @@ import java.net.Socket;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
+
 import Project.Common.PayloadType;
 import Project.Common.RollPayload;
 import Project.Common.RoomResultsPayload;
 import Project.Common.Payload;
+
 import Project.Common.ConnectionPayload;
 import Project.Common.LoggerUtil;
 
@@ -91,7 +93,6 @@ public class ServerThread extends BaseServerThread {
     }
 
     // handle received message from the Client
-    
     @Override
     protected void processPayload(Payload payload) {
         try {
@@ -100,15 +101,6 @@ public class ServerThread extends BaseServerThread {
                     ConnectionPayload cp = (ConnectionPayload) payload;
                     setClientName(cp.getClientName());
                     break;
-                    //js2637 11/10/2024
-                    //worked on it with my brother es525 from it114 
-                case FLIP:
-                    currentRoom.handleFlip(this);
-                    break;
-                case ROLL:
-                    RollPayload rp = (RollPayload) payload; 
-                    currentRoom.handleRoll(this, rp.getdice(), rp.getSide());  
-                break;
                 case MESSAGE:
                     currentRoom.sendMessage(this, payload.getMessage());
                     break;
@@ -123,6 +115,23 @@ public class ServerThread extends BaseServerThread {
                     break;
                 case DISCONNECT:
                     currentRoom.disconnect(this);
+                    break;
+                    case FLIP:
+                    currentRoom.handleFlip(this);
+                    break;
+                case ROLL:
+                    RollPayload rp = (RollPayload) payload;
+                    currentRoom.handleRoll(this, rp.getdice(), rp.getSide());
+                    break;
+                case PRIVATE_MESSAGE: // New case for private messages
+                    long targetClientId = payload.getClientId();
+                    String privateMessage = payload.getMessage();
+                    Room currentRoom = getCurrentRoom();
+    
+                    
+                if (currentRoom != null) {
+                        currentRoom.sendPrivateMessage(this, targetClientId, privateMessage);
+                }
                     break;
                 default:
                     break;

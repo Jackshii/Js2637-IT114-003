@@ -260,7 +260,7 @@ public class Room implements AutoCloseable{
             resultMessage = clientName + " rolled " + numdice + "d" + diceside + " and got " + total + " (Rolls: " + rollResults + ")";
         }
         
-        sendMessage(null, resultMessage);  
+        sendMessage(null, "**#b"+resultMessage+"b#**");  
     }
 
 
@@ -275,7 +275,16 @@ public class Room implements AutoCloseable{
         } else {
             resultMessage = String.format("%s flipped a coin and got Heads", clientName);
         }
-        sendMessage(null, resultMessage);  // Send the result message to all clients in the room
+        sendMessage(null,"#g**" +resultMessage+"**g#");  // Send the result message to all clients in the room
+    }
+    public void sendPrivateMessage(ServerThread sender, long targetClientId, String message) {
+        ServerThread targetClient = clientsInRoom.get(targetClientId);
+        if (targetClient != null) {
+            targetClient.sendMessage(sender.getClientId(), message); 
+            sender.sendMessage(sender.getClientId(), "You: " + message); 
+        } else {
+            sender.sendMessage(sender.getClientId(), "User  not found."); // Notify sender if user is not found
+        }
     }
     
 
@@ -288,9 +297,9 @@ public class Room implements AutoCloseable{
             message = message.replaceAll("\\*\\*(.*?)\\*\\*", "<b>$1</b>");
             message = message.replaceAll("\\*(.*?)\\*", "<i>$1</i>");
             message = message.replaceAll("_(.*?)_", "<u>$1</u>");
-            message = message.replaceAll("#r(.*?)r#", "<red>$1</red>");
-            message = message.replaceAll("#g(.*?)g#", "<green>$1</green>");
-            message = message.replaceAll("#b(.*?)b#", "<blue>$1</blue>");
+            message = message.replaceAll("#r(.*?)r#", "<span style='color:red'>$1</span>");
+            message = message.replaceAll("#g(.*?)g#", "<span style='color:green'>$1</span>");
+            message = message.replaceAll("#b(.*?)b#", "<span style='color:blue'>$1</span>");
             
             return message;
         }

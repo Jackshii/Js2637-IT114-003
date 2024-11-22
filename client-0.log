@@ -865,3 +865,688 @@ java.util.NoSuchElementException: No line found
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
 
+11/22/2024 13:31:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 13:31:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/22/2024 13:31:36 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m You shouldn't be using terminal input for Milestone 3. Interaction should be done through the UI
+11/22/2024 13:31:45 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m You shouldn't be using terminal input for Milestone 3. Interaction should be done through the UI
+11/22/2024 13:31:45 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 13:31:45 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 13:31:45 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Could not process Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+java.lang.NullPointerException: Cannot invoke "Project.Client.Interfaces.IConnectionEvents.onReceiveClientId(long)" because "Project.Client.Client.events" is null
+	at Project.Client.Client.processClientData(Client.java:584)
+	at Project.Client.Client.processPayload(Client.java:504)
+	at Project.Client.Client.listenToServer(Client.java:397)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/22/2024 13:31:45 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/22/2024 13:31:45 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Could not process Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+java.lang.NullPointerException: Cannot invoke "Project.Client.Interfaces.IRoomEvents.onRoomAction(long, String, String, boolean)" because "Project.Client.Client.events" is null
+	at Project.Client.Client.processRoomAction(Client.java:619)
+	at Project.Client.Client.processPayload(Client.java:517)
+	at Project.Client.Client.listenToServer(Client.java:397)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/22/2024 13:31:54 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m You shouldn't be using terminal input for Milestone 3. Interaction should be done through the UI
+11/22/2024 13:31:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [t]
+11/22/2024 13:31:54 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Could not process Payload: Payload[MESSAGE] Client Id [1] Message: [t]
+java.lang.NullPointerException: Cannot invoke "Project.Client.Interfaces.IMessageEvents.onMessageReceive(long, String)" because "Project.Client.Client.events" is null
+	at Project.Client.Client.processMessage(Client.java:593)
+	at Project.Client.Client.processPayload(Client.java:524)
+	at Project.Client.Client.listenToServer(Client.java:397)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/22/2024 13:31:55 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m You shouldn't be using terminal input for Milestone 3. Interaction should be done through the UI
+11/22/2024 13:31:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [y]
+11/22/2024 13:31:55 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Could not process Payload: Payload[MESSAGE] Client Id [1] Message: [y]
+java.lang.NullPointerException: Cannot invoke "Project.Client.Interfaces.IMessageEvents.onMessageReceive(long, String)" because "Project.Client.Client.events" is null
+	at Project.Client.Client.processMessage(Client.java:593)
+	at Project.Client.Client.processPayload(Client.java:524)
+	at Project.Client.Client.listenToServer(Client.java:397)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/22/2024 13:32:00 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m You shouldn't be using terminal input for Milestone 3. Interaction should be done through the UI
+11/22/2024 13:32:00 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 300 sided dice and got 201]
+11/22/2024 13:32:00 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Could not process Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 300 sided dice and got 201]
+java.lang.NullPointerException: Cannot invoke "Project.Client.Interfaces.IMessageEvents.onMessageReceive(long, String)" because "Project.Client.Client.events" is null
+	at Project.Client.Client.processMessage(Client.java:593)
+	at Project.Client.Client.processPayload(Client.java:524)
+	at Project.Client.Client.listenToServer(Client.java:397)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/22/2024 13:32:07 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m You shouldn't be using terminal input for Milestone 3. Interaction should be done through the UI
+11/22/2024 13:32:07 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 13:32:07 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [2] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 13:32:07 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [jack] Status [connect]
+11/22/2024 13:32:07 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [jack] Status [connect]
+11/22/2024 13:32:07 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Could not process Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [jack] Status [connect]
+java.lang.NullPointerException: Cannot invoke "Project.Client.Interfaces.IRoomEvents.onRoomAction(long, String, String, boolean)" because "Project.Client.Client.events" is null
+	at Project.Client.Client.processRoomAction(Client.java:619)
+	at Project.Client.Client.processPayload(Client.java:517)
+	at Project.Client.Client.listenToServer(Client.java:397)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/22/2024 13:32:07 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 13:32:14 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m You shouldn't be using terminal input for Milestone 3. Interaction should be done through the UI
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [test]
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Connection dropped
+java.io.StreamCorruptedException: invalid type code: 00
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1778)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:525)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:483)
+	at Project.Client.Client.listenToServer(Client.java:394)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	... 1 more elements truncated ...
+
+11/22/2024 13:32:14 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Could not process Payload: Payload[MESSAGE] Client Id [2] Message: [test]
+java.lang.NullPointerException: Cannot invoke "Project.Client.Interfaces.IMessageEvents.onMessageReceive(long, String)" because "Project.Client.Client.events" is null
+	at Project.Client.Client.processMessage(Client.java:593)
+	at Project.Client.Client.processPayload(Client.java:524)
+	at Project.Client.Client.listenToServer(Client.java:397)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Connection dropped
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:243)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1089)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2878)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3205)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3215)
+	... 11 more elements truncated ...
+
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/22/2024 13:32:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+11/22/2024 13:32:25 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m You shouldn't be using terminal input for Milestone 3. Interaction should be done through the UI
+11/22/2024 13:32:25 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Socket send exception
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.implWrite(Socket.java:1223)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1210)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.setBlockDataMode(ObjectOutputStream.java:1808)
+	at java.base/java.io.ObjectOutputStream.writeNonProxyDesc(ObjectOutputStream.java:1302)
+	... 16 more elements truncated ...
+
+11/22/2024 13:32:25 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.implWrite(Socket.java:1223)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1210)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.setBlockDataMode(ObjectOutputStream.java:1808)
+	at java.base/java.io.ObjectOutputStream.writeNonProxyDesc(ObjectOutputStream.java:1302)
+	... 16 more elements truncated ...
+
+11/22/2024 13:32:25 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/22/2024 13:32:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 13:32:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/22/2024 13:32:51 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m You shouldn't be using terminal input for Milestone 3. Interaction should be done through the UI
+11/22/2024 13:33:16 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1677)
+	at Project.Client.Client.listenToInput(Client.java:423)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+11/22/2024 13:33:16 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/22/2024 13:33:22 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 13:33:22 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 13:33:25 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/22/2024 13:33:25 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 13:33:25 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [3] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 13:33:25 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 13:33:25 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [jack] Status [connect]
+11/22/2024 13:33:25 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 13:33:25 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 13:33:25 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [2] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 13:33:25 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (3)
+11/22/2024 13:33:25 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+11/22/2024 13:33:25 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (2)
+11/22/2024 13:33:31 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 3 sided dice and got 1]
+11/22/2024 13:33:35 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 3d3 and got 6 (Rolls: 2 3 1)]
+11/22/2024 13:33:45 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack flipped a coin and got Heads]
+11/22/2024 13:33:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [<b>jack</b>]
+11/22/2024 13:38:52 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 13:38:52 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 13:38:55 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/22/2024 13:38:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 13:38:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 13:38:55 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 13:38:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/22/2024 13:38:56 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 13:38:56 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+11/22/2024 13:38:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+11/22/2024 13:39:07 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [jack]
+11/22/2024 13:39:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [er]
+11/22/2024 13:39:12 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+11/22/2024 13:39:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [disconnect]
+11/22/2024 13:39:29 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 13:39:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [bob] Client Name [jack] Status [connect]
+11/22/2024 13:39:29 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 13:39:29 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+11/22/2024 13:39:29 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Clearing user list
+11/22/2024 13:39:29 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+11/22/2024 13:39:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+11/22/2024 13:39:35 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello\]
+11/22/2024 13:39:52 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [helo]
+11/22/2024 13:39:56 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 3d3 and got 4 (Rolls: 2 1 1)]
+11/22/2024 13:40:38 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 13:40:38 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 13:40:42 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: hello hello
+11/22/2024 13:40:42 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 13:40:42 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [2] Message: [null] Client Name [hello hello] Status [connect]
+11/22/2024 13:40:42 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 13:40:42 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [hello hello] Status [connect]
+11/22/2024 13:40:42 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 13:40:42 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: hello hello (2)
+11/22/2024 13:40:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 13:40:53 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 13:41:01 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: asdf
+11/22/2024 13:41:01 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 13:41:01 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [3] Message: [null] Client Name [asdf] Status [connect]
+11/22/2024 13:41:01 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 13:41:01 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [asdf] Status [connect]
+11/22/2024 13:41:01 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 13:41:01 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: asdf (3)
+11/22/2024 13:41:22 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 13:41:22 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 13:41:28 [Project.Client.ClientUI$2] ([31mSEVERE[0m):
+[34m>[0m Error during disconnect: Cannot invoke "java.io.ObjectOutputStream.writeObject(Object)" because "this.out" is null
+11/22/2024 13:41:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 13:41:53 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 13:41:59 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: BOB
+11/22/2024 13:41:59 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 13:41:59 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [5] Message: [null] Client Name [BOB] Status [connect]
+11/22/2024 13:41:59 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 13:41:59 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [5] Message: [lobby] Client Name [BOB] Status [connect]
+11/22/2024 13:41:59 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 13:41:59 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [4] Message: [null] Client Name [Jack] Status [connect]
+11/22/2024 13:41:59 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: BOB (5)
+11/22/2024 13:41:59 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Jack (4)
+11/22/2024 14:08:40 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 14:08:40 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 14:08:43 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/22/2024 14:08:43 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 14:08:43 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 14:08:43 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 14:08:43 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/22/2024 14:08:43 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 14:08:43 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+11/22/2024 14:08:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b>jack rolled 3 sided dice and got 2</b>]
+11/22/2024 14:16:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 14:16:28 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 14:16:30 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/22/2024 14:16:30 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 14:16:30 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 14:16:30 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 14:16:30 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/22/2024 14:16:30 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 14:16:30 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+11/22/2024 14:16:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b>jack rolled 3 sided dice and got 3</b>]
+11/22/2024 14:16:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b>jack rolled 3d4 and got 8 (Rolls: 3 3 2)</b>]
+11/22/2024 14:25:24 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 14:25:24 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 14:25:27 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/22/2024 14:25:27 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 14:25:27 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 14:25:27 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 14:25:27 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/22/2024 14:25:27 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 14:25:27 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+11/22/2024 14:25:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+11/22/2024 14:25:34 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b>jack rolled 3d3 and got 5 (Rolls: 1 2 2)</b>]
+11/22/2024 14:25:38 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+11/22/2024 14:25:40 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b>jack flipped a coin and got Heads</b>]
+11/22/2024 14:37:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 14:37:46 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 14:37:49 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: Jack
+11/22/2024 14:37:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 14:37:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/22/2024 14:37:49 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 14:37:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/22/2024 14:37:49 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 14:37:49 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Jack (1)
+11/22/2024 14:37:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b><blue>Jack rolled 3d3 and got 8 (Rolls: 3 3 2)</blue></b>]
+11/22/2024 14:38:16 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b><blue>Jack rolled 3 sided dice and got 2</blue></b>]
+11/22/2024 14:41:34 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 14:41:34 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 14:41:36 [Project.Client.ClientUI$2] ([31mSEVERE[0m):
+[34m>[0m Error during disconnect: Cannot invoke "java.io.ObjectOutputStream.writeObject(Object)" because "this.out" is null
+11/22/2024 14:41:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 14:41:46 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 14:41:49 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: Jack
+11/22/2024 14:41:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 14:41:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/22/2024 14:41:49 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 14:41:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/22/2024 14:41:49 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 14:41:50 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Jack (1)
+11/22/2024 14:41:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b><span style='color:blue'>Jack rolled 3 sided dice and got 1</span></b>]
+11/22/2024 14:41:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [/roll3]
+11/22/2024 14:41:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [#g<b>Jack flipped a coin and got Tails</b>g#]
+11/22/2024 14:42:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [#g<b>Jack flipped a coin and got Tails</b>g#]
+11/22/2024 14:42:26 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [#ghellog#]
+11/22/2024 14:42:41 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [#r  hello r#]
+11/22/2024 14:43:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [<green>green</green>]
+11/22/2024 14:44:41 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 14:44:41 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 14:44:44 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: Jack
+11/22/2024 14:44:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 14:44:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/22/2024 14:44:44 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 14:44:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/22/2024 14:44:44 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 14:44:44 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Jack (1)
+11/22/2024 14:44:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [#b hello #b]
+11/22/2024 14:45:04 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [<span style='color:blue'> hello </span>]
+11/22/2024 14:45:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [#r hello r#]
+11/22/2024 14:45:59 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 14:45:59 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 14:46:02 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: Jack
+11/22/2024 14:46:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 14:46:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/22/2024 14:46:02 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 14:46:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/22/2024 14:46:02 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 14:46:02 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Jack (1)
+11/22/2024 14:46:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<span style='color:green'><b>Jack flipped a coin and got Tails</b></span>]
+11/22/2024 14:46:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [<span style='color:red'> hello </span>]
+11/22/2024 14:46:19 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [roll]
+11/22/2024 14:46:25 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b><span style='color:blue'>Jack rolled 3d3 and got 6 (Rolls: 1 2 3)</span></b>]
+11/22/2024 14:46:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b><span style='color:blue'>Jack rolled 3 sided dice and got 2</span></b>]
+11/22/2024 14:48:35 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 14:48:35 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 14:48:39 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: Jack
+11/22/2024 14:48:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 14:48:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/22/2024 14:48:39 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 14:48:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/22/2024 14:48:39 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 14:48:39 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Jack (1)
+11/22/2024 14:48:42 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [[0;31mInvalid roll command format. Use /roll # or /roll #d#.[0m]
+11/22/2024 14:50:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 14:50:02 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 14:50:05 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: Jack
+11/22/2024 14:50:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 14:50:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/22/2024 14:50:05 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 14:50:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/22/2024 14:50:05 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 14:50:05 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Jack (1)
+11/22/2024 14:50:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [<b><span style='color:red'>Invalid roll command format. Use /roll # or /roll #d#.</span></b>]
+11/22/2024 14:50:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [Jack]
+11/22/2024 15:05:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 15:05:28 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 15:05:32 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: Jack
+11/22/2024 15:05:32 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 15:05:32 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/22/2024 15:05:32 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 15:05:32 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/22/2024 15:05:32 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 15:05:32 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Jack (1)
+11/22/2024 15:05:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [BOB] Status [connect]
+11/22/2024 15:05:39 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 15:05:39 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: BOB (2)
+11/22/2024 15:06:19 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [jeff] Status [connect]
+11/22/2024 15:06:19 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 15:06:19 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jeff (3)
+11/22/2024 15:06:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [hello]
+11/22/2024 15:06:43 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [you know what is up broski]
+11/22/2024 15:06:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [hello]
+11/22/2024 15:56:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 15:56:09 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/22/2024 15:56:12 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: Jack
+11/22/2024 15:56:12 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 15:56:12 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [Jack] Status [connect]
+11/22/2024 15:56:12 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/22/2024 15:56:12 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [Jack] Status [connect]
+11/22/2024 15:56:12 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 15:56:12 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Jack (1)
+11/22/2024 15:56:18 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [Bob] Status [connect]
+11/22/2024 15:56:18 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 15:56:18 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Bob (2)
+11/22/2024 15:56:24 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [Eric] Status [connect]
+11/22/2024 15:56:24 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/22/2024 15:56:24 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Eric (3)
+11/22/2024 15:56:34 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [You: hello]
+11/22/2024 15:56:38 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [You: hello]
+11/22/2024 15:57:01 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b><span style='color:blue'>Jack rolled 3d3 and got 5 (Rolls: 2 1 2)</span></b>]
