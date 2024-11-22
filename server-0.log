@@ -1554,3 +1554,65 @@ java.net.SocketException: Connection reset
 [34m>[0m ServerThread[jack(1)]: ServerThread cleanup() end
 11/11/2024 16:41:49 [Project.Server.Server] ([32mINFO[0m):
 [34m>[0m JVM is shutting down. Perform cleanup tasks.
+11/22/2024 11:23:25 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+11/22/2024 11:23:25 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+11/22/2024 11:23:25 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+11/22/2024 11:23:25 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+11/22/2024 11:23:25 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+11/22/2024 11:24:08 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 11:24:08 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+11/22/2024 11:24:08 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+11/22/2024 11:24:08 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+11/22/2024 11:24:08 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jack] Status [disconnect]
+11/22/2024 11:24:08 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *jack[1] initialized*
+11/22/2024 11:24:08 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+11/22/2024 11:24:08 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jack[1] joined the Room[lobby]
+11/22/2024 11:24:12 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (3,3)
+11/22/2024 11:24:12 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 3d3 and got 7 (Rolls: 2 2 3)
+11/22/2024 11:24:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[ROLL] Client Id [0] Message: [null] (1,30)
+11/22/2024 11:24:16 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack rolled 30 sided dice and got 9
+11/22/2024 11:24:20 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[FLIP] Client Id [0] Message: [null]
+11/22/2024 11:24:20 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: jack flipped a coin and got Heads
+11/22/2024 11:24:30 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [**name**]
+11/22/2024 11:24:30 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: <b>name</b>
+11/22/2024 11:24:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+11/22/2024 11:24:36 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 1 recipients
+11/22/2024 11:24:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Thread being disconnected by server
+11/22/2024 11:24:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: ServerThread cleanup() start
+11/22/2024 11:24:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: ServerThread cleanup() end
+11/22/2024 11:24:36 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 0
+11/22/2024 11:24:36 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jack[1] disconnected
+11/22/2024 11:24:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: Exited thread loop. Cleaning up connection
+11/22/2024 11:24:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: ServerThread cleanup() start
+11/22/2024 11:24:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jack(1)]: ServerThread cleanup() end

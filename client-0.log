@@ -793,3 +793,75 @@ java.util.NoSuchElementException: No line found
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
 
+11/22/2024 11:23:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 11:23:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/22/2024 11:23:37 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.lang.NullPointerException: Cannot invoke "java.io.ObjectOutputStream.writeObject(Object)" because "this.out" is null
+	at Project.Client.Client.send(Client.java:312)
+	at Project.Client.Client.sendRoll(Client.java:225)
+	at Project.Client.Client.processClientCommand(Client.java:197)
+	at Project.Client.Client.listenToInput(Client.java:366)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	... 1 more elements truncated ...
+
+11/22/2024 11:23:37 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToInput thread stopped
+11/22/2024 11:23:56 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/22/2024 11:23:56 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client starting
+11/22/2024 11:24:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/22/2024 11:24:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/22/2024 11:24:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/22/2024 11:24:12 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 3d3 and got 7 (Rolls: 2 2 3)]
+11/22/2024 11:24:16 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack rolled 30 sided dice and got 9]
+11/22/2024 11:24:20 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jack flipped a coin and got Heads]
+11/22/2024 11:24:30 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [<b>name</b>]
+11/22/2024 11:24:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [jack] Status [disconnect]
+11/22/2024 11:24:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/22/2024 11:24:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/22/2024 11:24:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/22/2024 11:24:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/22/2024 11:24:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/22/2024 11:24:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/22/2024 11:24:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/22/2024 11:24:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/22/2024 11:24:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+11/22/2024 11:24:37 [Project.Client.Client] ([31mSEVERE[0m):
+[34m>[0m Error in listentToInput()
+java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1677)
+	at Project.Client.Client.listenToInput(Client.java:365)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1489)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2071)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2033)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
