@@ -12,4 +12,6 @@ public enum PayloadType {
     ROLL,
     FLIP,
     PRIVATE_MESSAGE,
+    MUTE,
+    UNMUTE,
 }

@@ -6,11 +6,14 @@ import Project.Common.*;
 import Project.Server.Room.TextFormatter;
 
 import java.util.*;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Room implements AutoCloseable{
     private String name;// unique name of the Room
     protected volatile boolean isRunning = false;
     private ConcurrentHashMap<Long, ServerThread> clientsInRoom = new ConcurrentHashMap<Long, ServerThread>();
+    
 
     public final static String LOBBY = "lobby";
 
@@ -194,6 +197,7 @@ public class Room implements AutoCloseable{
     if (!isRunning) { // block action if Room isn't running
         return;
     }
+    
 
     // Format the message using the TextFormatter class
     final String formattedMessage = TextFormatter.formatText(message);
@@ -280,8 +284,8 @@ public class Room implements AutoCloseable{
     public void sendPrivateMessage(ServerThread sender, long targetClientId, String message) {
         ServerThread targetClient = clientsInRoom.get(targetClientId);
         if (targetClient != null) {
-            targetClient.sendMessage(sender.getClientId(), message); 
-            sender.sendMessage(sender.getClientId(), "You: " + message); 
+            targetClient.sendMessage(sender.getClientId(), sender.getClientName()+"(P):"+message); 
+            sender.sendMessage(sender.getClientId(), "You to " +targetClient.getClientName() +"(P) :"+ message); 
         } else {
             sender.sendMessage(sender.getClientId(), "User  not found."); // Notify sender if user is not found
         }

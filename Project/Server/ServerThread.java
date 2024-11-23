@@ -123,15 +123,15 @@ public class ServerThread extends BaseServerThread {
                     RollPayload rp = (RollPayload) payload;
                     currentRoom.handleRoll(this, rp.getdice(), rp.getSide());
                     break;
-                case PRIVATE_MESSAGE: // New case for private messages
+                case PRIVATE_MESSAGE: 
                     long targetClientId = payload.getClientId();
                     String privateMessage = payload.getMessage();
                     Room currentRoom = getCurrentRoom();
     
                     
-                if (currentRoom != null) {
-                        currentRoom.sendPrivateMessage(this, targetClientId, privateMessage);
-                }
+                    if (currentRoom != null) {
+                    currentRoom.sendPrivateMessage(this, targetClientId, privateMessage);
+                    }
                     break;
                 default:
                     break;

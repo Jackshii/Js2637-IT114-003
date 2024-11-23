@@ -65,6 +65,9 @@ public enum Client {
     private final String ROLL = "roll";
     private final String FLIP = "flip";
 
+    private final String MUTE ="mute";
+    private final String UNMUTE= "unmute";
+    
 
     // callback that updates the UI
     private static IClientEvents events;
