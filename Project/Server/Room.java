@@ -6,7 +6,6 @@ import Project.Common.*;
 import Project.Server.Room.TextFormatter;
 
 import java.util.*;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Room implements AutoCloseable{
@@ -194,30 +193,23 @@ public class Room implements AutoCloseable{
      *                server-generated message
      */
     protected synchronized void sendMessage(ServerThread sender, String message) {
-    if (!isRunning) { // block action if Room isn't running
-        return;
-    }
-    
-
-    // Format the message using the TextFormatter class
-    final String formattedMessage = TextFormatter.formatText(message);
-
-    // Proceed to send the formatted message to all clients
-    long senderId = sender == null ? ServerThread.DEFAULT_CLIENT_ID : sender.getClientId();
-    info(String.format("sending message to %s recipients: %s", clientsInRoom.size(), formattedMessage));
-    clientsInRoom.values().removeIf(client -> {
-        boolean failedToSend = !client.sendMessage(senderId, formattedMessage);
-        if (failedToSend) {
-            info(String.format("Removing disconnected client[%s] from list", client.getClientId()));
-            disconnect(client);
+        if (!isRunning) {
+            return;
         }
-        return failedToSend;
-    });
-}
-    // end send data to client(s)
-
-    // receive data from ServerThread
+    //UCID js2637 11/24/22
+        final String formattedMessage = TextFormatter.formatText(message);
+        long senderId = sender != null ? sender.getClientId() : ServerThread.DEFAULT_CLIENT_ID; // Use DEFAULT_CLIENT_ID if sender is null
     
+        info(String.format("sending message to %s recipients: %s", clientsInRoom.size(), formattedMessage));
+        clientsInRoom.values().forEach(client -> {
+            // If the client has muted the sender, skip sending the message to them
+            if (sender != null && client.isMuted(senderId)) {
+                return; // This client will not receive messages from the muted sender
+            }
+            client.sendMessage(senderId, formattedMessage); // Send the message to all other clients
+        });
+    }
+
     protected void handleCreateRoom(ServerThread sender, String room) {
         if (Server.INSTANCE.createRoom(room)) {
             Server.INSTANCE.joinRoom(room, sender);
@@ -281,16 +273,6 @@ public class Room implements AutoCloseable{
         }
         sendMessage(null,"#g**" +resultMessage+"**g#");  // Send the result message to all clients in the room
     }
-    public void sendPrivateMessage(ServerThread sender, long targetClientId, String message) {
-        ServerThread targetClient = clientsInRoom.get(targetClientId);
-        if (targetClient != null) {
-            targetClient.sendMessage(sender.getClientId(), sender.getClientName()+"(P):"+message); 
-            sender.sendMessage(sender.getClientId(), "You to " +targetClient.getClientName() +"(P) :"+ message); 
-        } else {
-            sender.sendMessage(sender.getClientId(), "User  not found."); // Notify sender if user is not found
-        }
-    }
-    
 
     //js2637 11/10/2024
     //worked on it with my brother es525 from it114 
@@ -309,7 +291,58 @@ public class Room implements AutoCloseable{
         }
     }
 
- 
+  //UCID js2637 date:11/24/22
+  public void sendPrivateMessage(ServerThread sender, long targetClientId, String message) {
+    ServerThread targetClient = clientsInRoom.get(targetClientId);
+    if (targetClient != null) {
+       
+        if (targetClient.isMuted(sender.getClientId())) {
+            
+            return;
+        }
+        targetClient.sendMessage(sender.getClientId(),"[P] :"+message);
+        sender.sendMessage(sender.getClientId(),"[P] :"+message);
+    } else {
+        sender.sendMessage(sender.getClientId(), "User not found."); 
+    }
+}
+    public void handleMute(ServerThread sender, long targetClientId) {
+        ServerThread targetClient = clientsInRoom.get(targetClientId);
+        
+        if (targetClient != null) {
+            if (!sender.isMuted(targetClientId)) {
+                sender.mute(targetClientId); 
+                LoggerUtil.INSTANCE.info(String.format("Muted client: %s[%s]", targetClient.getClientName(), targetClientId));
+                sender.sendMessage(String.format("You have muted %s. You will no longer see messages from them until you unmute.", targetClient.getClientName()));
+            } else {
+                sender.sendMessage(String.format("%s is already muted.", targetClient.getClientName()));
+            }
+        } else {
+            sendMessage(sender, "User  not found to mute.");
+        }
+    }
+   
+
+    public void handleUnmute(ServerThread sender, long targetClientId) {
+        ServerThread targetClient = clientsInRoom.get(targetClientId);
+        
+        if (targetClient != null) {
+          
+            if (sender.isMuted(targetClientId)) {
+                
+                sender.unmute(targetClientId);
+                LoggerUtil.INSTANCE.info(String.format("Unmuted client: %s[%s]", targetClient.getClientName(), targetClientId));
+                
+                sender.sendMessage(String.format("%s has been unmuted.", targetClient.getClientName()));
+            } else {
+                
+                sender.sendMessage(String.format("%s is not muted.", targetClient.getClientName()));
+            }
+        } else {
+           
+            sendMessage(null, "User  not found to unmute.");
+        }
+    }
 
     // end receive data from ServerThread
 }

@@ -2246,3 +2246,283 @@ java.util.NoSuchElementException: No line found
 [34m>[0m Removing user list item for id 1
 11/22/2024 19:23:49 [Project.Client.Client] ([32mINFO[0m):
 [34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [You to Bob(P) :hello]
+11/24/2024 18:05:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/24/2024 18:05:48 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/24/2024 18:05:58 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/24/2024 18:05:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/24/2024 18:05:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [3] Message: [null] Client Name [jack] Status [connect]
+11/24/2024 18:05:58 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/24/2024 18:05:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [jack] Status [connect]
+11/24/2024 18:05:58 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:05:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [1] Message: [null] Client Name [bob] Status [connect]
+11/24/2024 18:05:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [2] Message: [null] Client Name [eric] Status [connect]
+11/24/2024 18:05:58 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (3)
+11/24/2024 18:05:58 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: bob (1)
+11/24/2024 18:05:58 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: eric (2)
+11/24/2024 18:06:01 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [hello]
+11/24/2024 18:06:03 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [hello]
+11/24/2024 18:06:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+11/24/2024 18:06:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<span style='color:green'><b>jack flipped a coin and got Tails</b></span>]
+11/24/2024 18:06:11 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [<b><span style='color:red'>Invalid roll command format. Use /roll # or /roll #d#.</span></b>]
+11/24/2024 18:06:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [<b><span style='color:blue'>jack rolled 3d3 and got 7 (Rolls: 3 2 2)</span></b>]
+11/24/2024 18:08:03 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [You have muted eric. You will no longer see messages from them until you unmute.]
+11/24/2024 18:08:31 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [eric has been unmuted.]
+11/24/2024 18:08:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [yo]
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [bob] Status [disconnect]
+11/24/2024 18:11:47 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [2] Message: [null] Client Name [eric] Status [disconnect]
+11/24/2024 18:11:47 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:11:47 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [3] Message: [null] Client Name [jack] Status [disconnect]
+11/24/2024 18:11:47 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m I disconnected
+11/24/2024 18:11:47 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/24/2024 18:11:47 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/24/2024 18:11:47 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 2
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/24/2024 18:11:47 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+11/24/2024 18:11:47 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 2
+11/24/2024 18:11:47 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 3
+11/24/2024 18:12:00 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/24/2024 18:12:09 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/24/2024 18:12:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/24/2024 18:12:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/24/2024 18:12:09 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/24/2024 18:12:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/24/2024 18:12:09 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:12:09 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+11/24/2024 18:12:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [eric] Status [connect]
+11/24/2024 18:12:09 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:12:09 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: eric (2)
+11/24/2024 18:12:10 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [bob] Status [connect]
+11/24/2024 18:12:10 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:12:10 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: bob (3)
+11/24/2024 18:12:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [your ass]
+11/24/2024 18:12:50 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+11/24/2024 18:12:50 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/24/2024 18:12:55 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/24/2024 18:12:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/24/2024 18:12:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [4] Message: [null] Client Name [jack] Status [connect]
+11/24/2024 18:12:55 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/24/2024 18:12:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [4] Message: [lobby] Client Name [jack] Status [connect]
+11/24/2024 18:12:55 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:12:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/24/2024 18:12:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [2] Message: [null] Client Name [eric] Status [connect]
+11/24/2024 18:12:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [3] Message: [null] Client Name [bob] Status [connect]
+11/24/2024 18:12:55 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (4)
+11/24/2024 18:12:55 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+11/24/2024 18:12:55 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: eric (2)
+11/24/2024 18:12:55 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: bob (3)
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [jack] Status [disconnect]
+11/24/2024 18:12:57 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [2] Message: [null] Client Name [eric] Status [disconnect]
+11/24/2024 18:12:57 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [3] Message: [null] Client Name [bob] Status [disconnect]
+11/24/2024 18:12:57 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [4] Message: [null] Client Name [jack] Status [disconnect]
+11/24/2024 18:12:57 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m I disconnected
+11/24/2024 18:12:57 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/24/2024 18:12:57 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/24/2024 18:12:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+11/24/2024 18:12:57 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+11/24/2024 18:12:57 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 2
+11/24/2024 18:12:57 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 2
+11/24/2024 18:12:57 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 3
+11/24/2024 18:12:57 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 3
+11/24/2024 18:12:57 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 4
+11/24/2024 18:13:02 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/24/2024 18:13:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/24/2024 18:13:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/24/2024 18:13:02 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/24/2024 18:13:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/24/2024 18:13:02 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:13:02 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+11/24/2024 18:13:03 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [eric] Status [connect]
+11/24/2024 18:13:03 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:13:03 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: eric (2)
+11/24/2024 18:13:03 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [bob] Status [connect]
+11/24/2024 18:13:03 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:13:03 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: bob (3)
+11/24/2024 18:13:06 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [[P]hello]
+11/24/2024 18:13:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+11/24/2024 18:13:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [jack] Status [disconnect]
+11/24/2024 18:13:28 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m I disconnected
+11/24/2024 18:13:28 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+11/24/2024 18:13:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/24/2024 18:13:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/24/2024 18:13:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/24/2024 18:13:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/24/2024 18:13:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+11/24/2024 18:13:28 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+11/24/2024 18:13:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+11/24/2024 18:13:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+11/24/2024 18:13:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+11/24/2024 18:13:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+11/24/2024 18:13:44 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+11/24/2024 18:13:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+11/24/2024 18:13:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+11/24/2024 18:13:44 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+11/24/2024 18:13:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+11/24/2024 18:13:44 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:13:44 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+11/24/2024 18:13:45 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [eric] Status [connect]
+11/24/2024 18:13:45 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:13:45 [Project.Client.Views.UserListPanel] ([33mWARNING[0m):
+[34m>[0m User already in the list: eric (2)
+11/24/2024 18:13:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [bob] Status [connect]
+11/24/2024 18:13:46 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+11/24/2024 18:13:46 [Project.Client.Views.UserListPanel] ([33mWARNING[0m):
+[34m>[0m User already in the list: bob (3)
+11/24/2024 18:13:50 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [[P] :hello]

@@ -65,9 +65,8 @@ public enum Client {
     private final String ROLL = "roll";
     private final String FLIP = "flip";
 
-    private final String MUTE ="mute";
-    private final String UNMUTE= "unmute";
-    
+    private final String MUTE = "mute";
+    private final String UNMUTE = "unmute";
 
     // callback that updates the UI
     private static IClientEvents events;
@@ -227,26 +226,41 @@ public enum Client {
                         wasCommand = true;
                         break;
                     case ROLL:
-                    if(commandValue.trim().isEmpty())
-                    {
-                        sendMessage("**#rInvalid roll command format. Use /roll # or /roll #d#.r#**");
-                    }
-                    else if (commandValue.contains("d")) {
-                
-                        String[] parts = commandValue.split("d");
-                        int numdice =  Integer.parseInt(parts[0]);
-                        int diceside = Integer.parseInt(parts[1]);    
-                        sendRoll(numdice,diceside);
-                    } 
-                    else
-                    {
-                        int diceside = Integer.parseInt(commandValue);
-                        sendRoll(1, diceside);
-                    }
+                        if (commandValue.trim().isEmpty()) {
+                            sendMessage("**#rInvalid roll command format. Use /roll # or /roll #d#.r#**");
+                        } else if (commandValue.contains("d")) {
+
+                            String[] parts = commandValue.split("d");
+                            int numdice = Integer.parseInt(parts[0]);
+                            int diceside = Integer.parseInt(parts[1]);
+                            sendRoll(numdice, diceside);
+                        } else {
+                            int diceside = Integer.parseInt(commandValue);
+                            sendRoll(1, diceside);
+                        }
                         wasCommand = true;
                         break;
                     case FLIP:
                         sendFlip();
+                        wasCommand = true;
+                        break;
+                    case MUTE:
+                        try {
+                            sendMute(commandValue);
+                        } catch (IOException e) {
+                            System.out.println(
+                                    TextFX.colorize("Error sending mute command: " + e.getMessage(), Color.RED));
+                        }
+                        wasCommand = true;
+                        break;
+
+                    case UNMUTE:
+                        try {
+                            sendUnmute(commandValue);
+                        } catch (IOException e) {
+                            System.out.println(
+                                    TextFX.colorize("Error sending unmute command: " + e.getMessage(), Color.RED));
+                        }
                         wasCommand = true;
                         break;
                     // Note: these are to disconnect, they're not for changing rooms
@@ -256,20 +270,59 @@ public enum Client {
                         sendDisconnect();
                         wasCommand = true;
                         break;
-                        
+
                 }
                 return wasCommand;
             }
         }
         return false;
     }
-    private void sendRoll(int numdie,int diceside) throws IOException {
-        RollPayload p= new RollPayload(numdie, diceside);
+
+    public void sendMute(String username) throws IOException {
+        if (username.trim().isEmpty()) {
+            System.out.println(TextFX.colorize("Invalid mute command format. Use /mute <username>.", Color.RED));
+            return;
+        }
+
+        long targetClientId = getClientIdFromUsername(username.trim());
+        if (targetClientId == -1) {
+            System.out.println(TextFX.colorize("User " + username + " not found.", Color.RED));
+            return;
+        }
+
+        Payload payload = new Payload();
+        payload.setClientId(targetClientId);
+        payload.setPayloadType(PayloadType.MUTE);
+        send(payload);
+        System.out.println(TextFX.colorize("Mute request sent for " + username, Color.GREEN));
+    }
+
+    public void sendUnmute(String username) throws IOException {
+        if (username.trim().isEmpty()) {
+            System.out.println(TextFX.colorize("Invalid unmute command format. Use /unmute <username>.", Color.RED));
+            return;
+        }
+
+        long targetClientId = getClientIdFromUsername(username.trim());
+        if (targetClientId == -1) {
+            System.out.println(TextFX.colorize("User " + username + " not found.", Color.RED));
+            return;
+        }
+
+        Payload payload = new Payload();
+        payload.setClientId(targetClientId);
+        payload.setPayloadType(PayloadType.UNMUTE);
+        send(payload);
+        System.out.println(TextFX.colorize("Unmute request sent for " + username, Color.GREEN));
+    }
+
+    private void sendRoll(int numdie, int diceside) throws IOException {
+        RollPayload p = new RollPayload(numdie, diceside);
         p.setPayloadType(PayloadType.ROLL);
         send(p);
     }
 
-    private void sendFlip()  throws IOException{
+    private void sendFlip() throws IOException {
         Payload p = new Payload();
         p.setPayloadType(PayloadType.FLIP);
         send(p);
@@ -340,27 +393,25 @@ public enum Client {
         if (processClientCommand(message)) {
             return;
         }
-    
-      
+
         if (message.startsWith("@")) {
-            
+
             int spaceIndex = message.indexOf(" ");
-            String targetUser ;
+            String targetUser;
             String privateMessage;
-    
+
             if (spaceIndex == -1) {
                 System.out.println("Invalid private message format.");
                 return;
             } else {
-                targetUser  = message.substring(1, spaceIndex); 
-                privateMessage = message.substring(spaceIndex + 1); 
+                targetUser = message.substring(1, spaceIndex);
+                privateMessage = message.substring(spaceIndex + 1);
             }
-            long targetClientId = getClientIdFromUsername(targetUser );
-            if (targetClientId == -1) { 
-                System.out.println("User  " + targetUser  + " not found.");
+            long targetClientId = getClientIdFromUsername(targetUser);
+            if (targetClientId == -1) {
+                System.out.println("User  " + targetUser + " not found.");
                 return;
             }
-    
 
             Payload payload = new Payload();
             payload.setPayloadType(PayloadType.PRIVATE_MESSAGE);
@@ -375,7 +426,6 @@ public enum Client {
             send(p);
         }
     }
-    
 
     private long getClientIdFromUsername(String username) {
         for (ClientData client : knownClients.values()) {
@@ -383,8 +433,9 @@ public enum Client {
                 return client.getClientId();
             }
         }
-        return -1; 
+        return -1;
     }
+
     /**
      * Sends chosen client name after socket handshake
      * 
