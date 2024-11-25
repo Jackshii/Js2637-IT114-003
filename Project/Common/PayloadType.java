@@ -11,4 +11,7 @@ public enum PayloadType {
     ROOM_LIST, // client: query for rooms, server: result of query
     ROLL,
     FLIP,
+    PRIVATE_MESSAGE,
+    MUTE,
+    UNMUTE,
 }

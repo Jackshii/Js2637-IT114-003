@@ -1,13 +1,17 @@
 package Project.Server;
 
 import java.net.Socket;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.function.Consumer;
+
 import Project.Common.PayloadType;
 import Project.Common.RollPayload;
 import Project.Common.RoomResultsPayload;
 import Project.Common.Payload;
+
 import Project.Common.ConnectionPayload;
 import Project.Common.LoggerUtil;
 
@@ -20,7 +24,8 @@ public class ServerThread extends BaseServerThread {
     private Room currentRoom;
     private long clientId;
     private String clientName;
-    private Consumer<ServerThread> onInitializationComplete; // callback to inform when this object is ready
+    private Consumer<ServerThread> onInitializationComplete;
+    private Set<Long> mutedClients = new HashSet<>();
 
     /**
      * Wraps the Socket connection and takes a Server reference and a callback
@@ -91,7 +96,6 @@ public class ServerThread extends BaseServerThread {
     }
 
     // handle received message from the Client
-    
     @Override
     protected void processPayload(Payload payload) {
         try {
@@ -100,15 +104,6 @@ public class ServerThread extends BaseServerThread {
                     ConnectionPayload cp = (ConnectionPayload) payload;
                     setClientName(cp.getClientName());
                     break;
-                    //js2637 11/10/2024
-                    //worked on it with my brother es525 from it114 
-                case FLIP:
-                    currentRoom.handleFlip(this);
-                    break;
-                case ROLL:
-                    RollPayload rp = (RollPayload) payload; 
-                    currentRoom.handleRoll(this, rp.getdice(), rp.getSide());  
-                break;
                 case MESSAGE:
                     currentRoom.sendMessage(this, payload.getMessage());
                     break;
@@ -123,6 +118,27 @@ public class ServerThread extends BaseServerThread {
                     break;
                 case DISCONNECT:
                     currentRoom.disconnect(this);
+                    break;
+                    case FLIP:
+                    currentRoom.handleFlip(this);
+                    break;
+                case ROLL:
+                    RollPayload rp = (RollPayload) payload;
+                    currentRoom.handleRoll(this, rp.getdice(), rp.getSide());
+                    break;
+                case PRIVATE_MESSAGE:
+                    long targetClientId = payload.getClientId();
+                    String privateMessage = payload.getMessage();
+                    currentRoom = getCurrentRoom();
+                    if (currentRoom != null) {
+                        currentRoom.sendPrivateMessage(this, targetClientId, privateMessage);
+                    }
+                    break;
+                case MUTE:
+                    currentRoom.handleMute(this,payload.getClientId());
+                    break;
+                case UNMUTE:
+                    currentRoom.handleUnmute(this,payload.getClientId());
                     break;
                 default:
                     break;
@@ -225,6 +241,16 @@ public class ServerThread extends BaseServerThread {
         cp.setClientName(clientName);
         return send(cp);
     }
+    public void mute(long targetClientId) {
+        mutedClients.add(targetClientId); 
+    }
 
+    public void unmute(long targetClientId) {
+        mutedClients.remove(targetClientId); 
+    }
+  
+    public boolean isMuted(long targetClientId) {
+        return mutedClients.contains(targetClientId);
+    }
     // end send methods
 }
