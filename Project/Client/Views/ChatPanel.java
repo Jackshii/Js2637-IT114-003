@@ -47,31 +47,25 @@ public class ChatPanel extends JPanel {
     private UserListPanel userListPanel;
     private final float CHAT_SPLIT_PERCENT = 0.7f;
     
+    //js2637 12/7/2024 worked on it with my brother es525
     private void exportChatHistory() {
     StringBuilder chatHistory = new StringBuilder();
-    
-    // Iterate through the chat area to collect messages
     for (Component component : chatArea.getComponents()) {
         if (component instanceof JEditorPane) {
             JEditorPane messagePane = (JEditorPane) component;
             String messageText = messagePane.getText();
-            // Strip out HTML tags
             String plainText = messageText.replaceAll("<html>", "")
                                            .replaceAll("</html>", "")
                                            .replaceAll("<head>", "")
                                            .replaceAll("</head>", "")
                                            .replaceAll("<body>", "")
                                            .replaceAll("</body>", "")
-                                           .replaceAll("<[^>]*>", ""); // Remove any remaining HTML tags
+                                           .replaceAll("<[^>]*>", ""); 
             chatHistory.append(plainText).append("\n");
         }
     }
-
-    // Generate a unique filename based on the current date and time
     String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
     String filename = "ChatHistory_" + timestamp + ".txt";
-
-    // Write the chat history to a file
     try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
         writer.write(chatHistory.toString());
         LoggerUtil.INSTANCE.info("Chat history exported to " + filename);
