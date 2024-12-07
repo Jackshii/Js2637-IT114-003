@@ -314,6 +314,7 @@ public class Room implements AutoCloseable{
                 sender.mute(targetClientId); 
                 LoggerUtil.INSTANCE.info(String.format("Muted client: %s[%s]", targetClient.getClientName(), targetClientId));
                 sender.sendMessage(String.format("You have muted %s. You will no longer see messages from them until you unmute.", targetClient.getClientName()));
+                targetClient.sendMessage(String.format("you have been muted by %s", sender.getClientName()));
             } else {
                 sender.sendMessage(String.format("%s is already muted.", targetClient.getClientName()));
             }
@@ -334,6 +335,7 @@ public class Room implements AutoCloseable{
                 LoggerUtil.INSTANCE.info(String.format("Unmuted client: %s[%s]", targetClient.getClientName(), targetClientId));
                 
                 sender.sendMessage(String.format("%s has been unmuted.", targetClient.getClientName()));
+                targetClient.sendMessage(String.format("%s has unmuted you", sender.getClientName()));
             } else {
                 
                 sender.sendMessage(String.format("%s is not muted.", targetClient.getClientName()));
