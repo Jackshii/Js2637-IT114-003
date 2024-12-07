@@ -2752,3 +2752,214 @@ java.util.NoSuchElementException: No line found
 [34m>[0m Removing user list item for id 1
 12/07/2024 12:07:32 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
 [34m>[0m Removing user list item for id 1
+12/07/2024 12:33:06 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+12/07/2024 12:33:06 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+12/07/2024 12:33:09 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+12/07/2024 12:33:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+12/07/2024 12:33:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+12/07/2024 12:33:09 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+12/07/2024 12:33:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+12/07/2024 12:33:09 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+12/07/2024 12:33:09 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+12/07/2024 12:33:12 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+12/07/2024 12:33:23 [Project.Client.Views.ChatPanel] ([32mINFO[0m):
+[34m>[0m Chat history exported to ChatHistory_20241207_123323.txt
+12/07/2024 12:35:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [jack] Status [disconnect]
+12/07/2024 12:35:33 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m I disconnected
+12/07/2024 12:35:33 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+12/07/2024 12:35:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+12/07/2024 12:35:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+12/07/2024 12:35:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+12/07/2024 12:35:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+12/07/2024 12:35:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+12/07/2024 12:35:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+12/07/2024 12:35:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+12/07/2024 12:35:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+12/07/2024 12:35:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+12/07/2024 12:35:33 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+12/07/2024 12:36:07 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+12/07/2024 12:36:09 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+12/07/2024 12:36:10 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+12/07/2024 12:36:19 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+12/07/2024 12:36:19 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+12/07/2024 12:36:19 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+12/07/2024 12:36:19 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+12/07/2024 12:36:19 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+12/07/2024 12:36:19 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+12/07/2024 12:36:19 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+12/07/2024 12:36:22 [Project.Client.Views.ChatPanel] ([32mINFO[0m):
+[34m>[0m Chat history exported to ChatHistory_20241207_123622.txt
+12/07/2024 12:36:25 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+12/07/2024 12:36:26 [Project.Client.Views.ChatPanel] ([32mINFO[0m):
+[34m>[0m Chat history exported to ChatHistory_20241207_123626.txt
+12/07/2024 12:38:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [jack] Status [disconnect]
+12/07/2024 12:38:48 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m I disconnected
+12/07/2024 12:38:48 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+12/07/2024 12:38:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+12/07/2024 12:38:48 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+12/07/2024 12:38:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+12/07/2024 12:38:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+12/07/2024 12:38:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+12/07/2024 12:38:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+12/07/2024 12:38:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+12/07/2024 12:38:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+12/07/2024 12:38:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+12/07/2024 12:38:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+12/07/2024 12:38:53 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+12/07/2024 12:38:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+12/07/2024 12:38:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+12/07/2024 12:38:53 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+12/07/2024 12:38:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+12/07/2024 12:38:53 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+12/07/2024 12:38:53 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+12/07/2024 12:38:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+12/07/2024 12:38:56 [Project.Client.Views.ChatPanel] ([32mINFO[0m):
+[34m>[0m Chat history exported to ChatHistory_20241207_123856.txt
+12/07/2024 12:39:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [jack] Status [disconnect]
+12/07/2024 12:39:21 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m I disconnected
+12/07/2024 12:39:21 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+12/07/2024 12:39:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+12/07/2024 12:39:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+12/07/2024 12:39:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+12/07/2024 12:39:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+12/07/2024 12:39:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+12/07/2024 12:39:21 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+12/07/2024 12:39:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+12/07/2024 12:39:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+12/07/2024 12:39:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+12/07/2024 12:39:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+12/07/2024 12:39:35 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+12/07/2024 12:39:35 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+12/07/2024 12:39:38 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: hello
+12/07/2024 12:39:45 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: hello
+12/07/2024 12:39:45 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+12/07/2024 12:39:45 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [hello] Status [connect]
+12/07/2024 12:39:45 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+12/07/2024 12:39:45 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [hello] Status [connect]
+12/07/2024 12:39:45 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+12/07/2024 12:39:45 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: hello (1)
+12/07/2024 12:39:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [test]
+12/07/2024 12:39:47 [Project.Client.Views.ChatPanel] ([31mSEVERE[0m):
+[34m>[0m Error exporting chat history
+java.io.FileNotFoundException: ChatHistory_2024\12\07_12:39:47.txt (The filename, directory name, or volume label syntax is incorrect)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:289)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:230)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:118)
+	at java.base/java.io.FileWriter.<init>(FileWriter.java:67)
+	at Project.Client.Views.ChatPanel.exportChatHistory(ChatPanel.java:75)
+	at Project.Client.Views.ChatPanel.lambda$new$2(ChatPanel.java:172)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	... 32 more elements truncated ...
+
+12/07/2024 12:40:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+12/07/2024 12:40:15 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+12/07/2024 12:40:17 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: jack
+12/07/2024 12:40:17 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+12/07/2024 12:40:18 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [jack] Status [connect]
+12/07/2024 12:40:18 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+12/07/2024 12:40:18 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [jack] Status [connect]
+12/07/2024 12:40:18 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+12/07/2024 12:40:18 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jack (1)
+12/07/2024 12:40:18 [Project.Client.Views.ChatPanel] ([32mINFO[0m):
+[34m>[0m Chat history exported to ChatHistory_20241207_124018.txt
+12/07/2024 12:40:31 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [test]
+12/07/2024 12:40:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [test]
+12/07/2024 12:40:34 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [test]
+12/07/2024 12:40:34 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [test]
+12/07/2024 12:40:35 [Project.Client.Views.ChatPanel] ([32mINFO[0m):
+[34m>[0m Chat history exported to ChatHistory_20241207_124035.txt
