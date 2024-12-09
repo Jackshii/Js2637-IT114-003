@@ -13,7 +13,11 @@ import java.awt.event.ContainerEvent;
 import java.awt.event.ContainerListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
@@ -42,6 +46,33 @@ public class ChatPanel extends JPanel {
     private JPanel chatArea = null;
     private UserListPanel userListPanel;
     private final float CHAT_SPLIT_PERCENT = 0.7f;
+    
+    //js2637 12/7/2024 worked on it with my brother es525
+    private void exportChatHistory() {
+    StringBuilder chatHistory = new StringBuilder();
+    for (Component component : chatArea.getComponents()) {
+        if (component instanceof JEditorPane) {
+            JEditorPane messagePane = (JEditorPane) component;
+            String messageText = messagePane.getText();
+            String plainText = messageText.replaceAll("<html>", "")
+                                           .replaceAll("</html>", "")
+                                           .replaceAll("<head>", "")
+                                           .replaceAll("</head>", "")
+                                           .replaceAll("<body>", "")
+                                           .replaceAll("</body>", "")
+                                           .replaceAll("<[^>]*>", ""); 
+            chatHistory.append(plainText).append("\n");
+        }
+    }
+    String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+    String filename = "ChatHistory_" + timestamp + ".txt";
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+        writer.write(chatHistory.toString());
+        LoggerUtil.INSTANCE.info("Chat history exported to " + filename);
+    } catch (IOException e) {
+        LoggerUtil.INSTANCE.severe("Error exporting chat history", e);
+    }
+}
 
     /**
      * Constructor to create the ChatPanel UI.
@@ -130,6 +161,10 @@ public class ChatPanel extends JPanel {
         });
 
         input.add(button);
+        
+        JButton exportButton = new JButton("Export Chat");
+        exportButton.addActionListener(event -> exportChatHistory());
+        input.add(exportButton);
 
         this.add(splitPane, BorderLayout.CENTER);
         this.add(input, BorderLayout.SOUTH);
